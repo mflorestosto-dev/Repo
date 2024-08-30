@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavandería Colorida</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Lavandería Colorida</title>
+            <link rel="stylesheet" href="styles.css">
+            <script defer src="scripts.js"></script>
+        </head>
+        <body>
+            <header>
+                <div class="cart-icon">
+                    <a href="#" id="cart-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </div>
+            </header>
+    </header>
+
+    <section id="hero">
+        <h1>Bienvenidos a Lavandería Colorida</h1>
+        <p>¡Hacemos que tu ropa brille con nuestros servicios de primera calidad!</p>
+        <a href="#services" class="btn-primary">Ver Servicios</a>
+    </section>
+
+    <main>
+    <section id="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="service-grid">
+            <div class="service-card" data-price = "6000.00">
+                <img src="images/lavado.jpg" alt="Lavado">
+                <h3>Lavado</h3>
+                <p>Lavado profesional con productos de alta calidad.</p>
+                <p>Price = $6000</p>
+                <button class="add-to-cart btn-secondary">Agregar al carrito</button>
+            </div>
+            <div class="service-card" data-price = "9000.00">
+                <img src="images/tintoreria.jpg" alt="Tintorería">
+                <h3>Tintorería</h3>
+                <p>Tratamientos especializados para prendas delicadas.</p>
+                <p>Price = $9000</p>
+                <button class="add-to-cart btn-secondary">Agregar al carrito</button>
+            </div>
+            <div class="service-card" data-price = "2000.00">
+                <img src="images/planchado.jpg" alt="Planchado">
+                <h3>Planchado</h3>
+                <p>Planchado impecable para un acabado perfecto.</p>
+                <p>Price = $2000</p>
+                <button class="add-to-cart btn-secondary">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <section id="about">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una lavandería comprometida con ofrecer el mejor servicio a nuestros clientes, utilizando productos ecológicos y métodos de limpieza modernos.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Lavandería Colorida. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="fab fa-facebook"></a>
+            <a href="https://twitter.com" target="_blank" class="fab fa-twitter"></a>
+            <a href="https://instagram.com" target="_blank" class="fab fa-instagram"></a>
+            <a href="https://linkedin.com" target="_blank" class="fab fa-linkedin"></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+<!-- Ventana lateral para el carrito -->
+<div id="cart-sidebar" class="cart-sidebar">
+    <h2>Tu Carrito</h2>
+    <div id="cart-items">
+        <!-- Aquí se agregarán dinámicamente los artículos -->
+    </div>
+    <hr>
+    <div class="cart-total">
+        <p>Total: $<span id="cart-total">0.00</span></p>
+    </div>
+    <button id="close-cart">Cerrar</button>
+</div>
+
+<!-- Filtro oscuro para cuando el carrito esté abierto -->
+<div id="cart-overlay" class="cart-overlay"></div>
+</html>
