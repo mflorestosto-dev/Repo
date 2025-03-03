@@ -19,7 +19,7 @@ public class UserModel {
     @Column
     private String email;
 
-    public Long getId() {s
+    public Long getId() {
         return Id;
     }
 
